@@ -14,7 +14,7 @@ def download(path: str, url: str, subdir: str = None):
         path = f'{path}/{subdir}'
         os.makedirs(path, exist_ok=True)
     # extract file name from url
-    re_pattern = '[0-9a-z]+.jpg'
+    re_pattern = '[0-9a-z]+.(jpg|png|gif)'
     nm = re.search(re_pattern, url).group()
     # file name
     f_name = f'{path}/{nm}'
