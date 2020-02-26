@@ -6,11 +6,6 @@ from bs4 import BeautifulSoup as bs
 
 
 class ScrapeWebsite(metaclass=ABCMeta):
-    url = None
-
-    def __init__(self, url: str):
-        self.url = url
-
     def get_imges_from_url(self, url: str):
         """
 
