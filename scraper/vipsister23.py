@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 
 """
-vipsister23.py
+scraper.py
 execute by `run()` and it returns page's title and including images
 """
 
@@ -12,7 +12,7 @@ def get_imges_from_url(url: str):
     """
 
     :param url: str
-        vipsister23's url
+        scraper's url
     :return: tuple
         page's title, image(list)
     """
