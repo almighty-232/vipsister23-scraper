@@ -36,4 +36,5 @@ print(f'다운로드 할 페이지 제목 : {title}')
 for image in images:
     downloader.download(path, image, title)
 
-print('done!')
+print()
+print(f'done!\n{len(images)} files downloaded!')
