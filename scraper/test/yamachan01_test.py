@@ -15,6 +15,9 @@ class TestScraper(unittest.TestCase):
         self.assertGreater(len(imgs), 0)
         for img in imgs:
             self.assertRegex(img, self.url_regex_pattern)
+        self.assertTrue('https://blog-imgs-103.fc2.com/y/a/m/yamachan01/20190720070419cb4.jpg' in imgs)
+        self.assertTrue('https://blog-imgs-103.fc2.com/y/a/m/yamachan01/20190720070157169.jpg' in imgs)
+
 
     def test_get_title(self):
         html = f'<html>' \
