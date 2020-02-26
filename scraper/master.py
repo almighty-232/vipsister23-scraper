@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
 from abc import ABCMeta, abstractmethod
+import re
 
 import requests
 from bs4 import BeautifulSoup as bs
 
 
 class ScrapeWebsite(metaclass=ABCMeta):
+    basic_url = None
+
+    def url_checker(self, url: str):
+        return None if re.match(f'{self.basic_url}.*', url) is None else self
+
     def get_imges_from_url(self, url: str):
         """
 
