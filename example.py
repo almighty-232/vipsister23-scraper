@@ -19,6 +19,7 @@ if not re.match(website_pattern, url):
     exit(1)
 
 # 서비스 대상 사이트 체크, 분기
+sc = None
 try:
     sc = util.selector(url)
 except RuntimeError as e:
