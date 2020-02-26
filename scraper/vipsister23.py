@@ -21,8 +21,7 @@ class Scraper(ScrapeWebsite):
         for item in obj.findAll('div', {'class':'t_b'}):
             inners = item.select('a')
             if inners:
-                for inner in inners:
-                    img_list.append(inner['href'].replace('-s', ''))
+                img_list += [inner['href'].replace('-s', '') for inner in inners]
         return img_list
 
 
