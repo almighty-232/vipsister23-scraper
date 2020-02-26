@@ -2,6 +2,7 @@ import re
 from . import vipsister23, yamachan01
 
 
+# Todo: make selector more elegant (actually, need no instance here to check scraper is available)
 def selector(url: str):
     check_result = list()
     check_result.append(vipsister23.Scraper().url_checker(url))
