@@ -35,6 +35,5 @@ class ScrapeWebsite(metaclass=ABCMeta):
 
 
 if __name__ == '__main__':
-    # print(get_imges_from_url('http://vipsister23.com/archives/9564543.html'))
     pass
 

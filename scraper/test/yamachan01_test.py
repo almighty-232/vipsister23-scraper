@@ -8,7 +8,7 @@ class TestScraper(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.sc = yamachan01.Scraper()
         cls.test_url = 'https://yamachan01.com/blog-entry-11681.html'
-        cls.url_regex_pattern = 'https://blog-imgs-103.fc2.com/y/a/m/yamachan01/[0-9a-z/]+.jpg'
+        cls.url_regex_pattern = 'https://blog-imgs-[0-9]+.fc2.com/y/a/m/yamachan01/[0-9a-z/]+.jpg'
 
     def test_get_imges_from_url(self):
         title, imgs = self.sc.get_imges_from_url(self.test_url)

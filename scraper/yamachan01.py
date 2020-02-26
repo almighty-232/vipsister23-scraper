@@ -20,10 +20,10 @@ class Scraper(ScrapeWebsite):
             inners = item.select('a')
             if inners:
                 for inner in inners:
-                    innerUrl = inner['href']
-                    pattern = 'https://blog-imgs-103.fc2.com/y/a/m/yamachan01/[0-9a-z/]+.jpg'
-                    if re.match(pattern, innerUrl):
-                        img_list.append(innerUrl)
+                    url = inner['href']
+                    pattern = 'https://blog-imgs-[0-9]+.fc2.com/y/a/m/yamachan01/[0-9a-z/]+.jpg'
+                    if re.match(pattern, url):
+                        img_list.append(url)
         return img_list
 
 
