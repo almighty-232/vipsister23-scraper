@@ -11,6 +11,7 @@ execute by `run()` and it returns page's title and including images
 
 
 class Scraper(ScrapeWebsite):
+    # Todo: handling basic url
     basic_url = r'https://yamachan01.com/'
 
     def get_title(self, obj: bs) -> str:
