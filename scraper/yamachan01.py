@@ -24,7 +24,7 @@ class Scraper(ScrapeWebsite):
             if inners:
                 for inner in inners:
                     url = inner['src']
-                    pattern = 'https://blog-imgs-[0-9]+.fc2.com/y/a/m/yamachan01/[0-9a-z/]+.jpg'
+                    pattern = 'https://blog-imgs-[0-9]+.fc2.com/y/a/m/yamachan01/[0-9a-z/]+..*'
                     if re.match(pattern, url):
                         img_list.append(url.replace('s.jpg', '.jpg'))
         return img_list
